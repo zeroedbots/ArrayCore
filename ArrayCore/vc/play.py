@@ -108,14 +108,12 @@ async def ping(_, e: Message):
                 else:
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                        await TheVenomXD.delete()
-                        caption=f"**> Playing in:** {srrf} \n\n**> Song:** {songname} \n**> Position:** #{pos} \n\n**BY:** [{user_name}]({userid})")
+                        await TheVenomXD.edit(f"**> Playing in:** {srrf} \n\n**> Song:** {songname} \n**> Position:** #{pos} \n\n**BY:** [{user_name}]({userid})")
                     else:
                         try:
                             await call_py1.join_group_call(chat_id, AudioPiped(ytlink), stream_type=StreamType().pulse_stream)
                             add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                            await TheVenomXD.delete()
-                            caption=f"**> Playing in:** {srrf} \n\n**> Song:** {songname} \n**> Position:** Currently Playing \n\n**By:** [{user_name}]({userid})")
+                            await TheVenomXD.edit(f"**> Playing in:** {srrf} \n\n**> Song:** {songname} \n**> Position:** Currently Playing \n\n**By:** [{user_name}]({userid})")
                         except Exception as ep:
                             await TheVenomXD.edit(f"`{ep}`")
 
