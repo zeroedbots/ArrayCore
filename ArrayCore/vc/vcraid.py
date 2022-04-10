@@ -99,7 +99,7 @@ async def vcraid(_, e: Message):
     vid = choice(vid_list)
     if inp:
         TheVenomXD = await e.reply_text("**Starting VC raid**")
-        link = f"https://itshellboy.tk/{aud[1:]}"
+        link = f"https://itshellboy.tk/{vid[1:]}"
         dlv = vid
         songname = aud[18:]
         if chat_id in QUEUE:
