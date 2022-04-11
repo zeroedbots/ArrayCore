@@ -108,7 +108,7 @@ async def vcraid(_, e: Message):
          chat_id = gid
     vid = choice(vid_list)
     if inp:
-        TheVenomXD = await e.reply_text("**Starting VC raid**")
+        TheVenomXD = await e.reply_text("**Starting Video raid**")
         link = f"https://itshellboy.tk/{vid[1:]}"
         dlv = vid
         songname = vid[18:]
@@ -154,7 +154,7 @@ async def vcraid(_, e: Message):
          chat_id = gid
     vid = choice(porn_list)
     if inp:
-        TheVenomXD = await e.reply_text("**Starting VC raid**")
+        TheVenomXD = await e.reply_text("**Starting Porn raid**")
         link = f"https://itshellboy.tk/{vid[1:]}"
         dlv = vid
         songname = vid[18:]
