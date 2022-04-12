@@ -183,7 +183,7 @@ async def vcraid(_, e: Message):
                 await call_py9.join_group_call(chat_id, AudioVideoPiped(dlv), stream_type=StreamType().pulse_stream)
             if call_py10:
                 await call_py10.join_group_call(chat_id, AudioVideoPiped(dlv), stream_type=StreamType().pulse_stream)
-            add_to_queue(chat_id, songname, dl, link, "Audio", 0)
+            add_to_queue(chat_id, songname, dlv, link, "Audio", 0)
             await TheVenomXD.delete()
             await e.reply_text(f"**> Raiding in:** {chat_.title} \n\n**> Audio:** {songname} \n**> Position:** Ongoing Raid")
 
