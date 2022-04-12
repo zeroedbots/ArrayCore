@@ -79,7 +79,7 @@ else:
 
 #-------------------------CLIENTS-----------------------------
 if SESSION:
-    Venom1 = Client(SESSION1, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
+    Venom1 = Client(SESSION, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
     call_py1 = PyTgCalls(Venom1)
 else:
     Venom1 = None
