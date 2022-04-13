@@ -19,15 +19,13 @@ _array_zip () {
 
 _starter () {
     local arraypath
-    arraypath="ArrayCore.zip"
-    echo "•••Collecting Data•••"
+    arraypath="srrayvore.zip"
+    echo "••• Collecting Data •••"
     wget -q $(_array_zip) -O "$arraypath"
     arraypath=$(zipinfo -1 "$arraypath" | grep -v "/.");
     unzip -qq "$arraypath"
     rm -rf "$arraypath"
-    
-    cd $arraypath
-    
+    cd $arraypath 
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     echo "••• Establishing ArrayCore •••"
     python3 -m ArrayCore
