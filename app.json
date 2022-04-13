@@ -1,34 +1,64 @@
 {
-    "name": "• ArrayCore •",
-    "description": "A Simple Telegram Voice Call Bot",
+    "name": "• ArrayCore : 2022 - 2022 •",
+    "description": "- A Multi Clients telegram Group voice Call Userbots. ArrayCore Having Many Features.",
     "logo": "https://telegra.ph/file/b918befe58de65045878c.jpg",
     "keywords": [
         "Telegram",
         "VCBot",
-        "MusicPlayer"
+        "MusicPlayer",
+        "ArrayCore",
+        "vcraid"
     ],
-    "repository": "https://github.com/Desinobita/TgVcUsers",
+    "repository": "https://github.com/Desinobita",
     "env": {
         "SESSION": {
             "description": "Pyrogram String Session.",
             "required": true
         },
         "API_ID": {
-            "description": "my.telegram.org",
+            "description": "Api Id Get this value from my.telegram.org",
             "required": true
         },
-        "ALIVE_PIC": {
+        "SESSION2": {
             "description": "Pyrogram String Session",
             "required": false
         },
+        "SESSION3": {
+            "description": "Pyrogram String Session",
+            "required": false
+        },
+        "SESSION4": {
+            "description": "Pyrogram String Session",
+            "required": false
+        },
+        "SESSION5": {
+            "description": "Pyrogram String Session",
+            "required": false
+        },
+        "SESSION6": {
+            "description": "Pyrogram String Session",
+            "required": false
+        },
+        "SESSION7": {
+            "description": "Pyrogram String Session",
+            "required": false
+        },
+        "SESSION8": {
+            "description": "Pyrogram String Session",
+            "required": false
+        },
+        "ALIVE_PIC": {
+            "description": "Alive Pic or video (Telegraph link)",
+            "required": false
+        },
         "API_HASH": {
-            "description": "my.telegram.org",
+            "description": "Api hash get this value from my.telegram.org",
             "required": true
         },
         "HNDLR": {
-            "description": "Handler | Default (!)",
+            "description": "cmd Handler | Default (!)",
             "value": "!",
-            "required": false 
+            "required": true
         },
         "GROUP_MODE": {
             "description": "Anyone can play, if set to True. Set it to False to restrict play access to Sudo Users/Contacts only",
@@ -40,19 +70,24 @@
             "required": true
         },
         "SUDO_USERS": {
-            "description": "USER ID OF THOSE PEOPLE WHO CAN CONTROL THE BOT",
+            "description": "Sudo Users id space by space (Users who can control bot)",
             "required": true 
         }
     },
-    "buildpacks": [{
-        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-      },{
-        "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
-      },{
-        "url": "https://github.com/heroku/heroku-buildpack-apt.git"
-      },{
-        "url": "https://github.com/chrismytton/heroku-buildpack-jq"
-      },{
-        "url": "heroku/python"
-      }]
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
 }
