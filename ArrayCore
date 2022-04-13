@@ -9,12 +9,12 @@ _python_() {
 
 _array_repo () {
     local arrepo
-    arrepo=`echo "aHR0cHM6Ly9naXRodWIuY29tL1RoZS1IZWxsQm90L0FycmF5Q29yZS90cmVlL21haW4=" | base64 -d`
+    arrepo=`echo "aHR0cDovL0dpdGh1Yi5jb20vVGhlLUhlbGxCb3QvQXJyYXlDb3Jl" | base64 -d`
     echo "$rlink"
 }
 
 _array_zip () {
-    echo "aHR0cHM6Ly9naXRodWIuY29tL1RoZS1IZWxsQm90L0FycmF5Q29yZS90cmVlL21haW4vQXJjaGl2ZS9BcnJheUNvcmU=" | base64 -d
+    echo "aHR0cDovL0dpdGh1Yi5jb20vVGhlLUhlbGxCb3QvQXJyYXlDb3JlL2FyY2hpdmUvbWFpbi56aXA=" | base64 -d
 }
 
 _starter () {
