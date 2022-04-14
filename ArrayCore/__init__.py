@@ -244,9 +244,6 @@ HELP_DICT["VC Raid"] = f"""
 HELP_DICT["Extras"] = f"""
 **Some extra commands!**
 
-**Commad:** `{hl}restart`
-**Usage:**  __To restart and update the bot.__
-
 **Commad:** `{hl}help`
 **Usage:** __To see the help menu with all command details.__
 
