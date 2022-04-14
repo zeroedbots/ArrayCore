@@ -20,6 +20,7 @@ vcbot = Client(
     plugins={'root': 'ArrayCore.vc'},
 )
 
+sudo = os.getenv("SUDO_USERS")
 SUDO_USERS = []
 if sudo:
     SUDO_USERS = make_int(sudo)
