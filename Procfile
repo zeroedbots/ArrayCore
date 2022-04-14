@@ -1,1 +1,1 @@
-worker: bash ArrayCore
+Venom: bash ArrayCore
