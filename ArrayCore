@@ -31,8 +31,7 @@ _set_bot () {
     wget -q $(_get_repolink) -O "$zippath"
     arraypath=$(zipinfo -1 "$zippath" | grep -v "/.");
     unzip -qq "$zippath"
-    echo "Done"
-    echo "  Cleaning ..."
+    echo "• Done •"
     rm -rf "$zippath"
     sleep 5
     cd $arraypath
