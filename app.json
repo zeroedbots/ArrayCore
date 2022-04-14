@@ -71,20 +71,23 @@
         },
         "SUDO_USERS": {
             "description": "Sudo Users id space by space (Users who can control bot)",
-            "required": true 
+            "required": true
         }
     },
-  "addons": [
-    {
-      "plan": "heroku-postgresql",
-      "options": {
-        "version": "12"
-      }
-    }
-  ],
+    "addons": [],
     "buildpacks": [
         {
             "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
         }
-    ]
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
 }
