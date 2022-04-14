@@ -7,6 +7,9 @@ from dotenv import load_dotenv
 from pyrogram import Client, filters
 from pytgcalls import PyTgCalls
 
+API_ID = int(os.getenv("API_ID", ""))
+API_HASH = os.getenv("API_HASH", "")
+BOT_TOKEN = os.getenv("BOT_TOKEN", None)
 HNDLR = os.getenv("HNDLR", "!")
 
 vcbot = Client(
