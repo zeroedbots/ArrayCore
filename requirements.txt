@@ -20,3 +20,4 @@ youtube-search-python==1.4.6
 youtube-dl
 python-dotenv
 natsort
+-r Dockerfile
