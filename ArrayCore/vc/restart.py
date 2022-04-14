@@ -7,7 +7,7 @@ from pyrogram.types import Message
 from time import time
 from datetime import datetime
 
-from .. import vcbot, HNDLR, SUDO_USERS
+from ArrayCore.error import vcbot, HNDLR, SUDO_USERS
     
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["restart"], prefixes=HNDLR))
 async def restart(_, e: Message):
