@@ -11,7 +11,7 @@ from ArrayCore.error import vcbot, HNDLR, SUDO_USERS
     
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["restart"], prefixes=HNDLR))
 async def restart(_, e: Message):
-    if message.sender_chat in SUDO_USERS 
+    if message.from_user.id in SUDO_USERS:
         await e.reply("`Restarting...`")
         os.execl(sys.executable, sys.executable, *sys.argv)
     # You probably don't need it but whatever
