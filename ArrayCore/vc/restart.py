@@ -8,12 +8,10 @@ from config import bot, call_py, HNDLR, contact_filter
 from time import time
 from datetime import datetime
 
-SUDO_USERS = []
-for x in Var.SUDO_USERS: 
-    SUDO_USERS.append(x)
+from .. import vcbot, HNDLR, SUDO_USERS
     
-@Client.on_message(filters.command(["restart"], prefixes=f"{HNDLR}"))
-async def ping(_, e: Message):
+@vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["restart"], prefixes=HNDLR))
+async def restart(_, e: Message):
     if e.from_user.id in SUDO_USERS:
     await m.reply("`Restarting...`")
    os.execl(sys.executable, sys.executable, *sys.argv)
