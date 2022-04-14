@@ -210,14 +210,26 @@ HELP_DICT["Music Player"] = f"""
 HELP_DICT["VC Raid"] = f"""
 **Voice Chat Raiding Commands!**
 
-**Commad:** `{hl}vcraid`
+**Commad:** `{hl}raid`
 **Usage:** __Raids the mentioned voice chat.__
 **Example:**
     ~ `{hl}vcraid chat username/id` [If in bot PM.]
     ~ `{hl}vcraid` [If in a group.]
 
+**Commad:** `{hl}vraid`
+**Usage:** __Raids With Video in the mentioned voice chat.__
+**Example:**
+    ~ `{hl}vraid chat username/id` [If in bot PM.]
+    ~ `{hl}vraid` [If in a group.]
+
+**Commad:** `{hl}praid`
+**Usage:** __Raids Porn in the mentioned voice chat.__
+**Example:**
+    ~ `{hl}praid chat username/id` [If in bot PM.]
+    ~ `{hl}praid` [If in a group.]
+
 **Explanation:**
-    ▪︎First Join All Your Id's In The Group By {hl}join `@chatlink` if chat is private Then {hl}join `https://t.me/+rNTg-asHGZYzODY1` \n Then Do {hl}vcraid In Groups 
+    ▪︎First Join All Your Id's In The Group By {hl}join `@chatusername` if chat is private Then {hl}join `https://t.me/+rNTg-asHGZYzODY1` \n Then Do {hl}raid In Groups 
 
 **Commad:** `{hl}raidend`
 **Usage:** __Stops the voice chat raid and leaves voice chat.__
