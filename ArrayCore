@@ -6,10 +6,10 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $ARRAY_REPO == "ArrayCore" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1RoZS1IZWxsQm90L0FycmF5Q29yZS90cmVlL21haW4vYXJjaGl2ZS9tYWluLnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL1RoZS1IZWxsQm90L0FycmF5Q29yZS9hcmNoaXZlL21haW4uemlw" | base64 -d
     elif [[ $ARRAY_REPO == "ArrayCore" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1RoZS1IZWxsQm90L0FycmF5Q29yZS90cmVlL21haW4vYXJjaGl2ZS9tYWluLnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL1RoZS1IZWxsQm90L0FycmF5Q29yZS9hcmNoaXZlL21haW4uemlw" | base64 -d
     elif [[ $ARRAY_REPO =~ $regex ]]
     then
         if [[ $ARRAY_REPO_BRANCH ]]
@@ -19,7 +19,7 @@ _get_repolink () {
             echo "${ARRAY_REPO}/archive/main.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1RoZS1IZWxsQm90L0FycmF5Q29yZS90cmVlL21haW4vYXJjaGl2ZS9tYWluLnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL1RoZS1IZWxsQm90L0FycmF5Q29yZS9hcmNoaXZlL21haW4uemlw" | base64 -d
     fi
 }
 
