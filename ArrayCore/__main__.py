@@ -4,7 +4,7 @@ from pyrogram import idle
 
 from . import (Venom1, Venom2, Venom3, Venom4, Venom5, Venom6, Venom7, Venom8, Venom9, Venom10, Venom11, Venom12, Venom13, Venom14, Venom15, vcbot, hl)
                
-from .. import (call_py1, call_py2, call_py3, call_py4,
+from ArrayCore import (call_py1, call_py2, call_py3, call_py4,
                call_py5, call_py6, call_py7, call_py8,
                call_py9, call_py10, call_py11, call_py12,
                call_py13, call_py14, call_py15)
