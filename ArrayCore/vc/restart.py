@@ -11,7 +11,7 @@ from .. import vcbot, HNDLR, SUDO_USERS
     
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["restart"], prefixes=HNDLR))
 async def restart(_, e: Message):
-    await m.reply("`Restarting...`")
+    await e.reply("`Restarting...`")
     os.execl(sys.executable, sys.executable, *sys.argv)
     # You probably don't need it but whatever
     quit()
