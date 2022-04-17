@@ -62,7 +62,7 @@ async def join(_, e: Message):
         if Venom15:
             await Venom15.join_chat(inp)
             count += 1
-        await e.reply_text(f"**Joined with** `{count}` **accounts!**")
+        await e.reply_text(f"**Joined Successfully ✅** \n\n __IDs__: `{count}` \n __Group__: `{inp}`")
     except Exception as ex:
         await e.reply_text(f"**ERROR:** \n\n{str(ex)}")
 
@@ -119,6 +119,6 @@ async def leave(_, e: Message):
         if Venom15:
             await Venom15.leave_chat(inp)
             count += 1
-        await e.reply_text(f"**Left with** `{count}` **accounts!**")
+        await e.reply_text(f"**Left Successfully ✅** \n\n __IDs__: `{count}` \n __Group__: `{inp}`")
     except Exception as ex:
         await e.reply_text(f"**ERROR:** \n\n{str(ex)}")
