@@ -11,7 +11,7 @@ from pytgcalls import PyTgCalls
 if os.path.exists(".env"):
     load_dotenv(".env")
     
-__version__ = "v0.0.1"
+__version__ = "v0.0.2"
 
 # -------------CONFIGS--------------------
 API_ID = int(os.getenv("API_ID", ""))
