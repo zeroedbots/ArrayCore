@@ -61,7 +61,7 @@ async def _Alive(_, e: Message):
                         "• Channel •", url="https://t.me/ArrayCore")
                 ], [
                     InlineKeyboardButton(
-                        "• Repo •", url="https://github.com/desinobita/TgVcUsers")
+                        "• Repo •", url="https://github.com/The-HellBot/ArrayCore")
                 ]],
         ),
     ) 
@@ -81,7 +81,7 @@ async def _Alive(_, e: Message):
                     InlineKeyboardButton("• Channel •", url="https://t.me/ArrayCore"),
                 ],
                 [
-                    InlineKeyboardButton("• Repo •", url="https://github.com/desinobita/TgVcUsers"),
+                    InlineKeyboardButton("• Repo •", url="https://github.com/The-HellBot/ArrayCore"),
                 ],
             ],
         ),
