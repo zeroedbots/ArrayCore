@@ -7,7 +7,7 @@ import time
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from .. import start_time, vcbot, HNDLR, SUDO_USERS
+from .. import start_time, vcbot, HNDLR, SUDO_USERS, __version__
 
 
 async def get_time(seconds: int) -> str:
@@ -39,4 +39,4 @@ async def ping(_, e: Message):
     x = await e.reply_text("**Ping !!**")
     et = datetime.datetime.now()
     pt = (et-st).microseconds / 1000
-    await x.edit_text(f"**ＰＯＮＧ** \n\n__Ping:__ `{pt} ms` \n__Uptime:__ `{uptime}`")
+    await x.edit_text(f"⟐ AʀʀᴀʏCᴏʀᴇ ⟐ \n\n ᴘɪɴɢ: `{pt} ms` \n ᴜᴘᴛɪᴍᴇ: `{uptime}` \n ᴠᴇʀsɪᴏɴ: `{__version__}`")
