@@ -38,7 +38,7 @@ aud_list = [
 ]
 
 
-@vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["raid"], prefixes=HNDLR))
+@vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["vcaid"], prefixes=HNDLR))
 async def vcraid(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
