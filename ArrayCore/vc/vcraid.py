@@ -38,7 +38,7 @@ aud_list = [
 ]
 
 
-@vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["vcaid"], prefixes=HNDLR))
+@vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["vcraid"], prefixes=HNDLR))
 async def vcraid(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
@@ -78,7 +78,6 @@ async def vcraid(_, e: Message):
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await TheVenomXD.delete()
             await e.reply_text(f"**> Raiding in:** {chat_.title} \n\n**> Audio:** {songname} \n**> Position:** Ongoing Raid")
-
 
 
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["raidend"], prefixes=HNDLR))
