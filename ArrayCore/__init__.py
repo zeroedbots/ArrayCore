@@ -26,13 +26,6 @@ SESSION5 = os.getenv("SESSION5", None)
 SESSION6 = os.getenv("SESSION6", None)
 SESSION7 = os.getenv("SESSION7", None)
 SESSION8 = os.getenv("SESSION8", None)
-SESSION9 = os.getenv("SESSION9", None)
-SESSION10 = os.getenv("SESSION10", None)
-SESSION11 = os.getenv("SESSION11", None)
-SESSION12 = os.getenv("SESSION12", None)
-SESSION13 = os.getenv("SESSION13", None)
-SESSION14 = os.getenv("SESSION14", None)
-SESSION15 = os.getenv("SESSION15", None)
 HNDLR = os.getenv("HNDLR", "!")
 GROUP_MODE = os.getenv("GROUP_MODE", "True")
 START_VID = os.getenv("START_VID", None)
@@ -79,109 +72,61 @@ else:
 
 #-------------------------CLIENTS-----------------------------
 if SESSION1:
-    Venom1 = Client(SESSION1, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
+    Venom1 = Client(name="Venom1", api_id=API_ID, api_hash=API_HASH, session_string=SESSION1)
     call_py1 = PyTgCalls(Venom1)
 else:
     Venom1 = None
     call_py1 = None
 
 if SESSION2:
-    Venom2 = Client(SESSION2, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
+    Venom2 = Client(name="Venom2", api_id=API_ID, api_hash=API_HASH, session_string=SESSION2)
     call_py2 = PyTgCalls(Venom2)
 else:
     Venom2 = None
     call_py2 = None
 
 if SESSION3:
-    Venom3 = Client(SESSION3, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
+    Venom3 = Client(name="Venom3", api_id=API_ID, api_hash=API_HASH, session_string=SESSION3)
     call_py3 = PyTgCalls(Venom3)
 else:
     Venom3 = None
     call_py3 = None
 
 if SESSION4:
-    Venom4 = Client(SESSION4, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
+    Venom4 = Client(name="Venom4", api_id=API_ID, api_hash=API_HASH, session_string=SESSION4)
     call_py4 = PyTgCalls(Venom4)
 else:
     Venom4 = None
     call_py4 = None
 
 if SESSION5:
-    Venom5 = Client(SESSION5, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
+    Venom5 = Client(name="Venom5", api_id=API_ID, api_hash=API_HASH, session_string=SESSION5)
     call_py5 = PyTgCalls(Venom5)
 else:
     Venom5 = None
     call_py5 = None
 
 if SESSION6:
-    Venom6 = Client(SESSION6, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
+    Venom6 = Client(name="Venom6", api_id=API_ID, api_hash=API_HASH, session_string=SESSION6)
     call_py6 = PyTgCalls(Venom6)
 else:
     Venom6 = None
     call_py6 = None
         
 if SESSION7:
-    Venom7 = Client(SESSION7, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
+    Venom7 = Client(name="Venom7", api_id=API_ID, api_hash=API_HASH, session_string=SESSION7)
     call_py7 = PyTgCalls(Venom7)
 else:
     Venom7 = None
     call_py7 = None
 
 if SESSION8:
-    Venom8 = Client(SESSION8, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
+    Venom8 = Client(name="Venom8", api_id=API_ID, api_hash=API_HASH, session_string=SESSION8)
     call_py8 = PyTgCalls(Venom8)
 else:
     Venom8 = None
     call_py8 = None
 
-if SESSION9:
-    Venom9 = Client(SESSION9, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
-    call_py9 = PyTgCalls(Venom9)
-else:
-    Venom9 = None
-    call_py9 = None
-    
-if SESSION10:
-    Venom10 = Client(SESSION10, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
-    call_py10 = PyTgCalls(Venom10)
-else:
-    Venom10 = None
-    call_py10 = None
-           
-if SESSION11:
-    Venom11 = Client(SESSION11, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
-    call_py11 = PyTgCalls(Venom11)
-else:
-    Venom11 = None
-    call_py11 = None
-
-if SESSION12:
-    Venom12 = Client(SESSION12, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
-    call_py12 = PyTgCalls(Venom12)
-else:
-    Venom12 = None
-    call_py12 = None
-
-if SESSION13:
-    Venom13 = Client(SESSION13, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
-    call_py13 = PyTgCalls(Venom13)
-else:
-    Venom13 = None
-    call_py13 = None
-
-if SESSION14:
-    Venom14 = Client(SESSION14, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
-    call_py14 = PyTgCalls(Venom14)
-else:
-    Venom14 = None
-    call_py14 = None
-
-if SESSION15:
-    Venom15 = Client(SESSION15, api_id=API_ID, api_hash=API_HASH, plugins={'root': 'ArrayCore.vc'})
-    call_py15 = PyTgCalls(Venom15)
-else:
-    Venom15 = None
-    call_py15 = None
 #----------------------------------------------------------------
 
 HELP_DICT["Music Player"] = f"""
