@@ -4,14 +4,10 @@ from pyrogram import idle
 
 from . import (Venom1, Venom2, Venom3, Venom4,
                Venom5, Venom6, Venom7, Venom8,
-               Venom9, Venom10, Venom11, Venom12, 
-               Venom13, Venom14, Venom15, vcbot,
-               hl)
+               vcbot, hl)
                
 from . import (call_py1, call_py2, call_py3, call_py4,
-               call_py5, call_py6, call_py7, call_py8,
-               call_py9, call_py10, call_py11, call_py12,
-               call_py13, call_py14, call_py15)
+               call_py5, call_py6, call_py7, call_py8)
 
 
 async def startup():
@@ -85,69 +81,6 @@ async def startup():
             await Venom8.join_chat("ArrayCore")
             await Venom8.join_chat("RiZoeLX")
             await Venom8.join_chat("Its_Hellbot")
-        except Exception as e:
-            print(str(e))
-
-    if Venom9:
-        try:
-            await Venom9.start()
-            await Venom9.join_chat("ArrayCore")
-            await Venom9.join_chat("RiZoeLX")
-            await Venom9.join_chat("Its_Hellbot")
-        except Exception as e:
-            print(str(e))
-
-    if Venom10:
-        try:
-            await Venom10.start()
-            await Venom10.join_chat("ArrayCore")
-            await Venom10.join_chat("RiZoeLX")
-            await Venom10.join_chat("Its_Hellbot")
-        except Exception as e:
-            print(str(e))
-
-    if Venom11:
-        try:
-            await Venom11.start()
-            await Venom11.join_chat("ArrayCore")
-            await Venom11.join_chat("RiZoeLX")
-            await Venom11.join_chat("Its_Hellbot")
-        except Exception as e:
-            print(str(e))
-
-    if Venom12:
-        try:
-            await Venom12.start()
-            await Venom12.join_chat("ArrayCore")
-            await Venom12.join_chat("RiZoeLX")
-            await Venom12.join_chat("Its_Hellbot")
-        except Exception as e:
-            print(str(e))
-
-    if Venom13:
-        try:
-            await Venom13.start()
-            await Venom13.join_chat("ArrayCore")
-            await Venom13.join_chat("RiZoeLX")
-            await Venom13.join_chat("Its_Hellbot")
-        except Exception as e:
-            print(str(e))
-
-    if Venom14:
-        try:
-            await Venom14.start()
-            await Venom14.join_chat("ArrayCore")
-            await Venom14.join_chat("RiZoeLX")
-            await Venom14.join_chat("Its_Hellbot")
-        except Exception as e:
-            print(str(e))
-
-    if Venom15:
-        try:
-            await Venom15.start()
-            await Venom15.join_chat("ArrayCore")
-            await Venom15.join_chat("RiZoeLX")
-            await Venom15.join_chat("Its_Hellbot")
         except Exception as e:
             print(str(e))
 
