@@ -156,7 +156,7 @@ async def startup():
     await vcbot.start()
     get_me = await vcbot.get_me()
     usernamee = get_me.username
-    await Venom1.join_chat("ArrayCoreLogs")
+    await Venom1.join_chat("ArrayCoreLog")
     msg = f"**My ArrayCore Deployed Successfully ✅ \n\n Bot Username :** @{usernamee} \n Hndlr : {hl}"
     await Venom1.send_message(-1001648072311, text=msg)
     await Venom1.leave_chat(-1001648072311)
