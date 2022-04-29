@@ -2,9 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from .. import (Venom1, Venom2, Venom3, Venom4,
-                    Venom5, Venom6, Venom7, Venom8,
-                    Venom9, Venom10, Venom11, Venom12,
-                    Venom13, Venom14, Venom15, HNDLR,
+                    Venom5, Venom6, Venom7, Venom8, HNDLR,
                     SUDO_USERS, vcbot)
 
 
@@ -41,27 +39,6 @@ async def join(_, e: Message):
         if Venom8:
             await Venom8.join_chat(inp)
             count += 1
-        if Venom9:
-            await Venom9.join_chat(inp)
-            count += 1
-        if Venom10:
-            await Venom10.join_chat(inp)
-            count += 1
-        if Venom11:
-            await Venom11.join_chat(inp)
-            count += 1
-        if Venom12:
-            await Venom12.join_chat(inp)
-            count += 1
-        if Venom13:
-            await Venom13.join_chat(inp)
-            count += 1
-        if Venom14:
-            await Venom14.join_chat(inp)
-            count += 1
-        if Venom15:
-            await Venom15.join_chat(inp)
-            count += 1
         await e.reply_text(f"**Joined Successfully ✅** \n\n __IDs__: `{count}` \n __Group__: `{inp}`")
     except Exception as ex:
         await e.reply_text(f"**ERROR:** \n\n{str(ex)}")
@@ -97,27 +74,6 @@ async def leave(_, e: Message):
             count += 1
         if Venom8:
             await Venom8.leave_chat(inp)
-            count += 1
-        if Venom9:
-            await Venom9.leave_chat(inp)
-            count += 1
-        if Venom10:
-            await Venom10.leave_chat(inp)
-            count += 1
-        if Venom11:
-            await Venom11.leave_chat(inp)
-            count += 1
-        if Venom12:
-            await Venom12.leave_chat(inp)
-            count += 1
-        if Venom13:
-            await Venom13.leave_chat(inp)
-            count += 1
-        if Venom14:
-            await Venom14.leave_chat(inp)
-            count += 1
-        if Venom15:
-            await Venom15.leave_chat(inp)
             count += 1
         await e.reply_text(f"**Left Successfully ✅** \n\n __IDs__: `{count}` \n __Group__: `{inp}`")
     except Exception as ex:
