@@ -31,20 +31,6 @@ async def _Alive(_, e: Message):
             ids += 1
         if Venom8:
             ids += 1
-        if Venom9:
-            ids += 1
-        if Venom10:
-            ids += 1
-        if Venom11:
-            ids += 1
-        if Venom12:
-            ids += 1
-        if Venom13:
-            ids += 1
-        if Venom14:
-            ids += 1
-        if Venom15:
-            ids += 1
         Array_msg = f"𝗔𝗿𝗿𝗮𝘆𝗖𝗼𝗿𝗲 𝗛𝗲𝗿𝗲. 🔥 \n\n"
         Array_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n"
         Array_msg += f"► Aʀʀᴀʏ ᴠᴇʀsɪᴏɴ : `{__version__}` \n"
