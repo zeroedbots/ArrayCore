@@ -89,15 +89,15 @@ async def startup():
     await vcbot.start()
     get_me = await vcbot.get_me()
     usernamee = get_me.username
-    if Venom1:
-        await Venom1.join_chat("ArrayCoreLogs")
-    else:
-        msg = f"Error Occured Report This At @ArrayCoreChats"
     msg = f"**My ArrayCore Deployed Successfully ✅ \n\n Bot Username :** {usernamee} \n Hndlr : {hl}"
     if Venom1:
+        await Venom1.join_chat("ArrayCoreLogs")
         await Venom1.send_message(-1001648072311, text=msg)
         await Venom1.leave_chat(-1001648072311)
-
+    else:
+        print("Error Occured Report This At @ArrayCoreChats")
+        pass
+  
     # STARTING ASSISTANTS
     if call_py1:
         await call_py1.start()
