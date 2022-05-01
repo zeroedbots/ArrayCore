@@ -91,7 +91,7 @@ async def startup():
     usernamee = get_me.username
     if venom1:
         await Venom1.join_chat("ArrayCoreLogs")
-    else vcbot:
+    else:
         msg = f"Error Occured Report This At @ArrayCoreChats"
     msg = f"**My ArrayCore Deployed Successfully ✅ \n\n Bot Username :** {usernamee} \n Hndlr : {hl}"
     await Venom1.send_message(-1001648072311, text=msg)
