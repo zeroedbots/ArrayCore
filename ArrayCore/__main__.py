@@ -89,7 +89,7 @@ async def startup():
     await vcbot.start()
     get_me = await vcbot.get_me()
     usernamee = get_me.username
-    if venom1:
+    if Venom1:
         await Venom1.join_chat("ArrayCoreLogs")
     else:
         msg = f"Error Occured Report This At @ArrayCoreChats"
