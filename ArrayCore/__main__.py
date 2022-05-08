@@ -95,7 +95,8 @@ async def startup():
         await Venom1.send_message(-1001648072311, text=msg)
         await Venom1.leave_chat(-1001648072311)
     else:
-        await Venom1.join_chat("ArrayCoreChats")
+        print("Error While Starting Clients")
+        pass
 
   
     # STARTING ASSISTANTS
