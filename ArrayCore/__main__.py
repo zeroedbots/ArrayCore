@@ -105,8 +105,3 @@ async def startup():
     
     # STARTUP COMPLETED
     await idle()
-
-
-loop = asyncio.get_event_loop()
-if __name__ == "__main__":
-    loop.run_until_complete(startup())
