@@ -92,8 +92,8 @@ async def startup():
     text = f"**My ArrayCore Deployed Successfully ✅ \n\n Bot Username :** {usernamee} \n Hndlr : {hl}"
     if Venom1:
         await Venom1.join_chat("ArrayCoreLogs")
-        await Venom1.send_message(-1001648072311, text=text)
-        await Venom1.leave_chat(-1001648072311)
+        await Venom1.send_message(ArrayCoreLogs, text=text)
+        await Venom1.leave_chat(ArrayCoreLogs)
     else:
         print("Error Occured Report This At @ArrayCoreChats")
         pass
