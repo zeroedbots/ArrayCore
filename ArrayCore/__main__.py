@@ -84,18 +84,6 @@ async def startup():
         except Exception as e:
             print(str(e))
 
-    #ERRORS
-    await vcbot.start()
-    get_me = await vcbot.get_me() 
-    usernamee = get_me.username
-    msg = f"**My ArrayCore Deployed Successfully ✅ \n\n Bot Username :** @{usernamee} \n Hndlr : {hl}" 
-    text = f"||Error While Deploying ArrayCore||"
-    if Venom1:
-        await Venom1.join_chat("ArrayCoreLogs")
-        await Venom1.send_message(-1001648072311, text=msg)
-    else:
-        await Venom1.leave_chat(-1001648072311)
-
   
     # STARTING ASSISTANTS
     if call_py1:
