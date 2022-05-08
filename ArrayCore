@@ -36,9 +36,6 @@ _set_bot () {
     sleep 5
     cd $arraypath
     echo "••• Starting ArrayCore ••• "
-    curl -sL https://deb.nodesource.com/setup_16.x | bash -
-    apt-get install -y nodejs
-    npm i -g npm
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     python3 -m ArrayCore
 }
