@@ -50,7 +50,7 @@ async def vcraid(_, e: Message):
     if inp:
         TheVenomXD = await e.reply_text("**Starting VC raid**")
         link = f"https://itshellboy.tk/{aud[1:]}"
-        dl = aud
+        dl = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
         songname = aud[18:]
         if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
