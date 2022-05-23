@@ -37,11 +37,11 @@ aud_list = [
 
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["vraid"], prefixes=HNDLR))
 async def vraid(_, e: Message):
-     await e.reply_text(f"There Is an Error In Command {HNDLR}vraid !! ,\n We'll Fix It Soon \n\n © @ArrayCore")
+     await e.reply_text(f"__There Is an Error In Command {HNDLR}vraid !! \n We'll Fix It Soon__ \n\n **© @ArrayCore**")
 
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["praid"], prefixes=HNDLR))
 async def vraid(_, e: Message):
-     await e.reply_text(f"There Is an Error In Command {HNDLR}praid !! ,\n We'll Fix It Soon \n\n © @ArrayCore")
+     await e.reply_text(f"__There Is an Error In Command {HNDLR}praid !! \n We'll Fix It Soon__ \n\n **© @ArrayCore**")
 
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["vcraid"], prefixes=HNDLR))
 async def vcraid(_, e: Message):
