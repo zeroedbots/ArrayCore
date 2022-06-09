@@ -24,7 +24,7 @@ async def spam(_, e: Message):
       gid = e.chat.id
       uid = e.from_user.id
       if gid == uid:
-          Grp = await vcbot.ask(chat_id=e.chat.id, text="**Send Group Link Or Username Where You want to spam**")
+          Grp = await vcbot.send_message(chat_id=e.chat.id, text="**Send Group Link Or Username Where You want to spam**")
           Group = Grp.text
           if "/cancel" in Group:
              return await e.reply_text("**All Process Cancelled**")
