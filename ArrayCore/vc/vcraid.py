@@ -76,7 +76,7 @@ async def vcraid(_, e: Message):
     aud8 = choice(aud_list)
     if inp:
         TheVenomXD = await e.reply_text("**Starting VC raid**")
-        link = f"https://itshellboy.tk/{aud[1:]}"
+        link = f"https://itshellboy.tk/{aud1[1:]}"
         dl1 = aud1
         dl2 = aud2
         dl3 = aud3
