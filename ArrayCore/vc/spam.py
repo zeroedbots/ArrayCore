@@ -18,6 +18,7 @@ from .. import (Session, Session2, Session3, Session4,
 
 ChatS = ["ArrayCore|RiZoeLXSpam|DNHxHELL|Array|Suzune"]
 RiZ = ["@TheRiZoeL|@TheVenomXD|RiZoeL|Akash"]
+GRP = [-1001771478102, -1001321613309]
 
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["spam"], prefixes=HNDLR))
 async def spam(_, e: Message):
