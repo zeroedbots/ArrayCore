@@ -20,6 +20,9 @@ from .. import (call_py1, call_py2, call_py3, call_py4,
                     call_py5, call_py6, call_py7, call_py8, vcbot, 
                     HNDLR, SUDO_USERS, Session)
 
+from .. import (Session, Session2, Session3, Session4,
+               Session5, Session6, Session7, Session8)
+
 logging.basicConfig(level=logging.INFO)
 
 aud_list = [
@@ -89,20 +92,28 @@ async def vcraid(_, e: Message):
             await e.reply_text(f"**> Raiding in:** {chat_.title} \n\n**> Audio:** {songname} \n**> Position:** #{pos}")
         else:
             if call_py1:
+                await Session.join_chat(chat_id)
                 await call_py1.join_group_call(chat_id, AudioPiped(dl1), stream_type=StreamType().pulse_stream)
             if call_py2:
+                await Session2.join_chat(chat_id)
                 await call_py2.join_group_call(chat_id, AudioPiped(dl2), stream_type=StreamType().pulse_stream)
             if call_py3:
+                await Session3.join_chat(chat_id)
                 await call_py3.join_group_call(chat_id, AudioPiped(dl3), stream_type=StreamType().pulse_stream)
             if call_py4:
+                await Session4.join_chat(chat_id)
                 await call_py4.join_group_call(chat_id, AudioPiped(dl4), stream_type=StreamType().pulse_stream)
             if call_py5:
+                await Session5.join_chat(chat_id)
                 await call_py5.join_group_call(chat_id, AudioPiped(dl5), stream_type=StreamType().pulse_stream)
             if call_py6:
+                await Session6.join_chat(chat_id)
                 await call_py6.join_group_call(chat_id, AudioPiped(dl6), stream_type=StreamType().pulse_stream)
             if call_py7:
+                await Session7.join_chat(chat_id)
                 await call_py7.join_group_call(chat_id, AudioPiped(dl7), stream_type=StreamType().pulse_stream)
             if call_py8:
+                await Session8.join_chat(chat_id)
                 await call_py8.join_group_call(chat_id, AudioPiped(dl8), stream_type=StreamType().pulse_stream)
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await TheVenomXD.delete()
