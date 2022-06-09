@@ -6,7 +6,7 @@ from ArrayCore.vc.queues import QUEUE, clear_queue
 from .. import vcbot, HNDLR, SUDO_USERS
     
 
-@vcbot.on_message(filters.user(SUDO_USERS) & ~filters.private & filters.command(["list"], prefixes=HNDLR))
+@vcbot.on_message(filters.user(SUDO_USERS) & ~filters.private & filters.command(["playlist"], prefixes=HNDLR))
 async def ping(_, e: Message):
     chat_id = e.chat.id
     if chat_id in QUEUE:
