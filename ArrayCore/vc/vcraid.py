@@ -85,9 +85,9 @@ async def vcraid(_, e: Message):
         dl7 = aud6
         dl6 = aud7
         dl8 = aud8
-        songname = aud[18:]
+        songname = aud1[18:]
         if chat_id in QUEUE:
-            pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
+            pos = add_to_queue(chat_id, songname, dl1, dl2, dl3, dl4, dl5, dl6, dl7, dl8, link, "Audio", 0)
             await TheVenomXD.delete()
             await e.reply_text(f"**> Raiding in:** {chat_.title} \n\n**> Audio:** {songname} \n**> Position:** #{pos}")
         else:
