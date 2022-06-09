@@ -15,29 +15,29 @@ async def join(_, e: Message):
     if inp.isnumeric():
         return await e.reply_text("Can't join a chat with chat id. Give username or invite link.")
     try:
-        if Venom1:
-            await Venom1.join_chat(inp)
+        if Session:
+            await Session.join_chat(inp)
             count += 1
-        if Venom2:
-            await Venom2.join_chat(inp)
+        if Session2:
+            await Session2.join_chat(inp)
             count += 1
-        if Venom3:
-            await Venom3.join_chat(inp)
+        if Session3:
+            await Session3.join_chat(inp)
             count += 1
-        if Venom4:
-            await Venom4.join_chat(inp)
+        if Session4:
+            await Session4.join_chat(inp)
             count += 1
-        if Venom5:
-            await Venom5.join_chat(inp)
+        if Session5:
+            await Session5.join_chat(inp)
             count += 1
-        if Venom6:
-            await Venom6.join_chat(inp)
+        if Session6:
+            await Session6.join_chat(inp)
             count += 1
-        if Venom7:
-            await Venom7.join_chat(inp)
+        if Session7:
+            await Session7.join_chat(inp)
             count += 1
-        if Venom8:
-            await Venom8.join_chat(inp)
+        if Session8:
+            await Session8.join_chat(inp)
             count += 1
         await e.reply_text(f"**Joined Successfully ✅** \n\n __IDs__: `{count}` \n __Group__: `{inp}`")
     except Exception as ex:
@@ -51,29 +51,29 @@ async def leave(_, e: Message):
     if not inp:
         return await e.reply_text("Need a chat username or chat id to leave.")
     try:
-        if Venom1:
-            await Venom1.leave_chat(inp)
+        if Session:
+            await Session.leave_chat(inp)
             count += 1
-        if Venom2:
-            await Venom2.leave_chat(inp)
+        if Session2:
+            await Session2.leave_chat(inp)
             count += 1
-        if Venom3:
-            await Venom3.leave_chat(inp)
+        if Session3:
+            await Session3.leave_chat(inp)
             count += 1
-        if Venom4:
-            await Venom4.leave_chat(inp)
+        if Session4:
+            await Session4.leave_chat(inp)
             count += 1
-        if Venom5:
-            await Venom5.leave_chat(inp)
+        if Session5:
+            await Session5.leave_chat(inp)
             count += 1
-        if Venom6:
-            await Venom6.leave_chat(inp)
+        if Session6:
+            await Session6.leave_chat(inp)
             count += 1
-        if Venom7:
-            await Venom7.leave_chat(inp)
+        if Session7:
+            await Session7.leave_chat(inp)
             count += 1
-        if Venom8:
-            await Venom8.leave_chat(inp)
+        if Session8:
+            await Session8.leave_chat(inp)
             count += 1
         await e.reply_text(f"**Left Successfully ✅** \n\n __IDs__: `{count}` \n __Group__: `{inp}`")
     except Exception as ex:
