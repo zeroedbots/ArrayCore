@@ -198,8 +198,8 @@ async def stream(client, m: Message):
             await huehue.edit(f"Queued at **#{pos}**")
          else:
             await Venom1.join_chat(chat_id)    
-                try:
-                    await call_py1.join_group_call(
+            try:
+               await call_py1.join_group_call(
                         chat_id,
                         AudioPiped(
                         livelink,
