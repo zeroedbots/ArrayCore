@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from .. import (Venom1, Venom2, Venom3, Venom4,
-                    Venom5, Venom6, Venom7, Venom8, HNDLR,
+from .. import (Session, Session2, Session3, Session4,
+               Session5, Session6, Session7, Session8, HNDLR,
                     SUDO_USERS, vcbot)
 
 
