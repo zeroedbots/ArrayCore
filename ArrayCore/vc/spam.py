@@ -23,7 +23,7 @@ GRP = [-1001771478102, -1001321613309]
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["spam"], prefixes=HNDLR))
 async def spam(_, e: Message):
     usage = ""
-    if event.is_group:
+    if e.is_group:
        Array = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
        if len(Array) == 2:
            Chat_id = e.chat.id
