@@ -117,7 +117,7 @@ async def ping(_, e: Message):
                         except Exception as ep:
                             await TheVenomXD.edit(f"`{ep}`")
 
-@Venom1.on_message(filters.user(SUDO_USERS) & filters.command(["pfrm"], prefixes=HNDLR))
+@vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["pfrm"], prefixes=HNDLR))
 async def playfrom(client, m: Message):
  if (m.from_user and m.from_user.is_contact) or m.outgoing:
     chat_id = m.chat.id
@@ -147,7 +147,7 @@ async def playfrom(client, m: Message):
                 if chat_id in QUEUE:
                     add_to_queue(chat_id, songname, location, link, "Audio", 0)
                 else:
-                    await call_py.join_group_call(
+                    await call_py1.join_group_call(
                         chat_id,
                         AudioPiped(location),
                         stream_type=StreamType().pulse_stream,
@@ -171,7 +171,7 @@ async def playfrom(client, m: Message):
             await hmm.edit(f"**ERROR** \n`{e}`")
 
 
-@Client.on_message(filters.command(['stream'], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["stream"], prefixes=HNDLR))
 async def stream(client, m: Message):
  if GRPPLAY or (m.from_user and m.from_user.is_contact) or m.outgoing:
    chat_id = m.chat.id
@@ -199,7 +199,7 @@ async def stream(client, m: Message):
          else:
             await Session.join_chat(chat_id)
             try:
-               await call_py.join_group_call(
+               await call_py1.join_group_call(
                   chat_id,
                   AudioPiped(
                      livelink,
