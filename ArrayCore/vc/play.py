@@ -119,7 +119,7 @@ async def ping(_, e: Message):
 
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["pfrm"], prefixes=HNDLR))
 async def playfrom(client, m: Message):
- if GRPPLAY or (m.from_user and m.from_user.is_contact) or m.outgoing:
+ if (m.from_user and m.from_user.is_contact) or m.outgoing:
     chat_id = m.chat.id
     if len(m.command) < 2:
         await m.reply(
