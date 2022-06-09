@@ -17,7 +17,7 @@ from youtubesearchpython import VideosSearch
 
 from ArrayCore.vc.queues import QUEUE, add_to_queue, get_queue
 from . import CHAT_TITLE, gen_thumb
-from .. import vcbot, call_py1, HNDLR, SUDO_USERS, Venom1 
+from .. import vcbot, call_py1, HNDLR, SUDO_USERS, Session 
 
 logging.basicConfig(level=logging.INFO)
 
