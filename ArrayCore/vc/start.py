@@ -3,7 +3,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
-from .. import vcbot, SUDO_USERS, HNDLR, hl, START_VID
+from .. import vcbot, SUDO_USERS, HNDLR, hl
 
 # @vcbot.on_message(filters.user(SUDO_USERS) & filters.private & filters.command(["start"], prefixes=HNDLR))
 # async def start(_, e: Message):
