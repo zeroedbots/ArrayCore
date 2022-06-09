@@ -173,7 +173,7 @@ async def playfrom(client, m: Message):
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["stream"], prefixes=HNDLR))
 async def stream(client, m: Message):
- if GRPPLAY or (m.from_user and m.from_user.is_contact) or m.outgoing:
+ if SUDO_USERS or (m.from_user and m.from_user.is_contact) or m.outgoing:
    chat_id = m.chat.id
    if len(m.command) < 2:
       await m.reply("`Give A Link/LiveLink/.m3u8 URL/YTLink to Play Audio from 🎶`")
