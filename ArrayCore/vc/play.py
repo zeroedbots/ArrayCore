@@ -117,3 +117,55 @@ async def ping(_, e: Message):
                         except Exception as ep:
                             await TheVenomXD.edit(f"`{ep}`")
 
+@vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["pfrm"], prefixes=HNDLR))
+async def playfrom(client, m: Message):
+ if GRPPLAY or (m.from_user and m.from_user.is_contact) or m.outgoing:
+    chat_id = m.chat.id
+    if len(m.command) < 2:
+        await m.reply(
+            f"**Use:** \n\n`!playfrom [chat_id/username]` \n`{HNDLR}playfrom [chat_id/username]`"
+        )
+    else:
+        args = m.text.split(maxsplit=1)[1]
+        if ";" in args:
+            chat = args.split(";")[0]
+            limit = int(args.split(";")[1])
+        else:
+            chat = args
+            limit = 10
+            lmt = 9
+        await m.delete()
+        hmm = await m.reply(f"📥 Take {limit} Random Songs From {chat}**")
+        try:
+            async for x in bot.search_messages(chat, limit=limit, filter="audio"):
+                location = await x.download()
+                if x.audio.title:
+                    songname = x.audio.title[:30] + "..."
+                else:
+                    songname = x.audio.file_name[:30] + "..."
+                link = x.link
+                if chat_id in QUEUE:
+                    add_to_queue(chat_id, songname, location, link, "Audio", 0)
+                else:
+                    await call_py.join_group_call(
+                        chat_id,
+                        AudioPiped(location),
+                        stream_type=StreamType().pulse_stream,
+                    )
+                    add_to_queue(chat_id, songname, location, link, "Audio", 0)
+                    # await m.reply_to_message.delete()
+                    await m.reply_photo(
+                        photo="https://telegra.ph/file/6213d2673486beca02967.png",
+                        caption=f"""
+**▶ Start Playing Songs Dari {chat}
+🏷️ Title: [{songname}]({link})
+💬 Chat ID: {chat_id}
+🎧 Requested by: {m.from_user.mention}**
+""",
+                    )
+            await hmm.delete()
+            await m.reply(
+                f"➕ Adding {lmt} Songs Into The Queue\n• Click {HNDLR}playlist To View a Playlist**"
+            )
+        except Exception as e:
+            await hmm.edit(f"**ERROR** \n`{e}`")
