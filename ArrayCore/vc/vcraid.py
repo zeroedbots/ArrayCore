@@ -126,7 +126,7 @@ async def ping(_, e: Message):
     uid = e.from_user.id
     if gid == uid:
         inp = e.text[8:]
-        chat_ = await Venom1.get_chat(inp)
+        chat_ = await Session.get_chat(inp)
         chat_id = chat_.id
     else:
          chat_id = gid
@@ -162,7 +162,7 @@ async def ping(_, e: Message):
     uid = e.from_user.id
     if gid == uid:
         inp = e.text[8:]
-        chat_ = await Venom1.get_chat(inp)
+        chat_ = await Session.get_chat(inp)
         chat_id = chat_.id
     else:
          chat_id = gid
@@ -197,7 +197,7 @@ async def ping(_, e: Message):
     uid = e.from_user.id
     if gid == uid:
         inp = e.text[8:]
-        chat_ = await Venom1.get_chat(inp)
+        chat_ = await Session.get_chat(inp)
         chat_id = chat_.id
     else:
          chat_id = gid
