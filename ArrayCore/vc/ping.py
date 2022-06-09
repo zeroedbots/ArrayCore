@@ -40,3 +40,10 @@ async def ping(_, e: Message):
     et = datetime.datetime.now()
     pt = (et-st).microseconds / 1000
     await x.edit_text(f"⟐ AʀʀᴀʏCᴏʀᴇ ⟐ \n\n ᴘɪɴɢ: `{pt} ms` \n ᴜᴘᴛɪᴍᴇ: `{uptime}` \n ᴠᴇʀsɪᴏɴ: `{__version__}`")
+
+@vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["restart"], prefixes=HNDLR))
+async def restart(client, m: Message):
+   await m.reply("`Restarting...\n\n• @ArrayCore • `")
+   os.execl(sys.executable, sys.executable, *sys.argv)
+   # You probably don't need it but whatever
+   quit()
