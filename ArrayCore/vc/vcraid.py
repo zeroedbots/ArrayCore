@@ -63,11 +63,25 @@ async def vcraid(_, e: Message):
         chat_id = chat_.id
     else:
          chat_id = gid
-    aud = choice(aud_list)
+    aud1 = choice(aud_list)
+    aud2 = choice(aud_list)
+    aud3 = choice(aud_list)
+    aud4 = choice(aud_list)
+    aud5 = choice(aud_list)
+    aud6 = choice(aud_list)
+    aud7 = choice(aud_list)
+    aud8 = choice(aud_list)
     if inp:
         TheVenomXD = await e.reply_text("**Starting VC raid**")
         link = f"https://itshellboy.tk/{aud[1:]}"
-        dl = aud
+        dl1 = aud1
+        dl2 = aud2
+        dl3 = aud3
+        dl4 = aud4
+        dl5 = aud5
+        dl7 = aud6
+        dl6 = aud7
+        dl8 = aud8
         songname = aud[18:]
         if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
@@ -75,21 +89,21 @@ async def vcraid(_, e: Message):
             await e.reply_text(f"**> Raiding in:** {chat_.title} \n\n**> Audio:** {songname} \n**> Position:** #{pos}")
         else:
             if call_py1:
-                await call_py1.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
+                await call_py1.join_group_call(chat_id, AudioPiped(dl1), stream_type=StreamType().pulse_stream)
             if call_py2:
-                await call_py2.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
+                await call_py2.join_group_call(chat_id, AudioPiped(dl2), stream_type=StreamType().pulse_stream)
             if call_py3:
-                await call_py3.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
+                await call_py3.join_group_call(chat_id, AudioPiped(dl3), stream_type=StreamType().pulse_stream)
             if call_py4:
-                await call_py4.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
+                await call_py4.join_group_call(chat_id, AudioPiped(dl4), stream_type=StreamType().pulse_stream)
             if call_py5:
-                await call_py5.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
+                await call_py5.join_group_call(chat_id, AudioPiped(dl5), stream_type=StreamType().pulse_stream)
             if call_py6:
-                await call_py6.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
+                await call_py6.join_group_call(chat_id, AudioPiped(dl6), stream_type=StreamType().pulse_stream)
             if call_py7:
-                await call_py7.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
+                await call_py7.join_group_call(chat_id, AudioPiped(dl7), stream_type=StreamType().pulse_stream)
             if call_py8:
-                await call_py8.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
+                await call_py8.join_group_call(chat_id, AudioPiped(dl8), stream_type=StreamType().pulse_stream)
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             await TheVenomXD.delete()
             await e.reply_text(f"**> Raiding in:** {chat_.title} \n\n**> Audio:** {songname} \n**> Position:** Ongoing Raid")
