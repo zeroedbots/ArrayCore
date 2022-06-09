@@ -13,21 +13,21 @@ Array = ALIVE_PIC or "https://telegra.ph/file/fea7a0ef15a02dd5e4aac.jpg"
 async def _Alive(_, e: Message):
     ids = 0
     try:
-        if Venom1:
+        if Session:
             ids += 1
-        if Venom2:
+        if Session2:
             ids += 1
-        if Venom3:
+        if Session3:
             ids += 1
-        if Venom4:
+        if Session4:
             ids += 1
-        if Venom5:
+        if Session5:
             ids += 1
-        if Venom6:
+        if Session6:
             ids += 1
-        if Venom7:
+        if Session7:
             ids += 1
-        if Venom8:
+        if Session8:
             ids += 1
         Array_msg = f"𝗔𝗿𝗿𝗮𝘆𝗖𝗼𝗿𝗲 𝗛𝗲𝗿𝗲. 🔥 \n\n"
         Array_msg += f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n"
