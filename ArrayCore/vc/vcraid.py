@@ -18,7 +18,7 @@ from ArrayCore.vc.queues import QUEUE, add_to_queue, get_queue, clear_queue
 
 from .. import (call_py1, call_py2, call_py3, call_py4,
                     call_py5, call_py6, call_py7, call_py8, vcbot, 
-                    HNDLR, SUDO_USERS, Venom1)
+                    HNDLR, SUDO_USERS, Session)
 
 logging.basicConfig(level=logging.INFO)
 
