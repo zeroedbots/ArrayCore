@@ -171,9 +171,9 @@ async def playfrom(client, m: Message):
             await hmm.edit(f"**ERROR** \n`{e}`")
 
 
-@vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["stream"], prefixes=HNDLR))
+@Client.on_message(filters.command(['stream'], prefixes=f"{HNDLR}"))
 async def stream(client, m: Message):
- if (m.from_user and m.from_user.is_contact) or m.outgoing:
+ if GRPPLAY or (m.from_user and m.from_user.is_contact) or m.outgoing:
    chat_id = m.chat.id
    if len(m.command) < 2:
       await m.reply("`Give A Link/LiveLink/.m3u8 URL/YTLink to Play Audio from 🎶`")
@@ -197,16 +197,16 @@ async def stream(client, m: Message):
             pos = add_to_queue(chat_id, "Radio 📻", livelink, link, "Audio", 0)
             await huehue.edit(f"Queued at **#{pos}**")
          else:
-            await Session.join_chat(chat_id)    
+            await Session.join_chat(chat_id)
             try:
-               await call_py1.join_group_call(
-                        chat_id,
-                        AudioPiped(
-                        livelink,
-                         ),
-                         stream_type=StreamType().pulse_stream,
-                      )
-                  add_to_queue(chat_id, "Radio 📻", livelink, link, "Audio", 0)
-                  await huehue.edit(f"Started Playing **[Radio 📻]({link})** in `{chat_id}`", disable_web_page_preview=True)
-               except Exception as ep:
-                  await huehue.edit(f"`{ep}`")
+               await call_py.join_group_call(
+                  chat_id,
+                  AudioPiped(
+                     livelink,
+                  ),
+                  stream_type=StreamType().pulse_stream,
+               )
+               add_to_queue(chat_id, "Radio 📻", livelink, link, "Audio", 0)
+               await huehue.edit(f"Started Playing **[Radio 📻]({link})** in `{chat_id}`", disable_web_page_preview=True)
+            except Exception as ep:
+               await huehue.edit(f"`{ep}`")
