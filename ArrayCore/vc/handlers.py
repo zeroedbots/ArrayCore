@@ -6,7 +6,7 @@ from pytgcalls.types.input_stream.quality import HighQualityAudio, HighQualityVi
 from pytgcalls.types.stream import StreamAudioEnded
  
 from ArrayCore.vc.queues import QUEUE, get_queue, pop_an_item, clear_queue
-from .. import call_py1, Venom1, vcbot
+from .. import call_py1, Session, vcbot
 
 
 async def skip_current_song(chat_id):
