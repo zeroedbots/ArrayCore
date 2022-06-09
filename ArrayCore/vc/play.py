@@ -78,6 +78,7 @@ async def ping(_, e: Message):
                 await TheVenomXD.delete()
                 await e.reply_text(f"**> Playing in:** {e.chat.title} \n\n**> Song:** {songname} \n**> Position:** #{pos}")
             else:
+                await Session.join_chat(chat_id)
                 await call_py1.join_group_call(chat_id, AudioPiped(dl), stream_type=StreamType().pulse_stream)
                 add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                 await TheVenomXD.delete()
@@ -208,5 +209,68 @@ async def stream(client, m: Message):
                )
                add_to_queue(chat_id, "Radio 📻", livelink, link, "Audio", 0)
                await huehue.edit(f"Started Playing **[Radio 📻]({link})** in `{chat_id}`", disable_web_page_preview=True)
+            except Exception as ep:
+               await huehue.edit(f"`{ep}`")
+
+
+
+@vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["vstream"], prefixes=HNDLR))
+async def vstream(client, m: Message):
+ if SUDO_USERS or (m.from_user and m.from_user.is_contact) or m.outgoing:
+   chat_id = m.chat.id
+   if len(m.command) < 2:
+      await m.reply("`Give A Link/LiveLink/.m3u8 URL/YTLink to Stream from 🎶`")
+   else:
+      if len(m.command)==2:
+         link = m.text.split(None, 1)[1]
+         Q = 720
+         huehue = await  m.reply("`Trying to Stream 💭`")
+      elif len(m.command)==3:
+         op = m.text.split(None, 1)[1]
+         link = op.split(None, 1)[0]
+         quality = op.split(None, 1)[1]
+         if quality == "720" or "480" or "360":
+            Q = int(quality)
+         else:
+            Q = 720
+            await m.reply("`Only 720, 480, 360 Allowed` \n`Now Streaming in 720p`")
+         huehue = await m.reply("`Trying to Stream 💭`")
+      else:
+         await m.reply("`!vstream {link} {720/480/360}`")
+
+      # Filtering out YouTube URL's
+      regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
+      match = re.match(regex,link)
+      if match:
+         hm, livelink = await ytdl(link)
+      else:
+         livelink = link
+         hm = 1
+
+      if hm==0:
+         await huehue.edit(f"**YTDL ERROR ⚠️** \n\n`{ytlink}`")
+      else:
+         if chat_id in QUEUE:
+            pos = add_to_queue(chat_id, "Live Stream 📺", livelink, link, "Video", Q)
+            await huehue.edit(f"Queued at **#{pos}**")
+         else:
+            if Q==720:
+               hmmm = HighQualityVideo()
+            elif Q==480:
+               hmmm = MediumQualityVideo()
+            elif Q==360:
+               hmmm = LowQualityVideo()
+            try:
+               await call_py1.join_group_call(
+                  chat_id,
+                  AudioVideoPiped(
+                     livelink,
+                     HighQualityAudio(),
+                     hmmm
+                  ),
+                  stream_type=StreamType().pulse_stream,
+               )
+               add_to_queue(chat_id, "Live Stream 📺", livelink, link, "Video", Q)
+               await huehue.edit(f"Started **[Live Stream 📺]({link})** in `{chat_id}`", disable_web_page_preview=True)
             except Exception as ep:
                await huehue.edit(f"`{ep}`")
