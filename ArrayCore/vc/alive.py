@@ -2,8 +2,8 @@ from pyrogram import filters
 from pyrogram import __version__ as pyro_vr
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from .. import (Venom1, Venom2, Venom3, Venom4,
-                Venom5, Venom6, Venom7, Venom8, HNDLR,
+from .. import (Session, Session2, Session3, Session4,
+               Session5, Session6, Session7, Session8, HNDLR,
                 SUDO_USERS, vcbot, ALIVE_PIC, __version__)                   
 
 Array = ALIVE_PIC or "https://telegra.ph/file/fea7a0ef15a02dd5e4aac.jpg"
