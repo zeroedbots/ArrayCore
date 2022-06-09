@@ -41,7 +41,7 @@ async def spam(_, e: Message):
               chat_id = chat_.id
           else:
               return await e.reply_text("**Send Group Link or Username**")
-          Ans = await vcbot.ask(chat_id=e.chat.id, text="**Send Counts**")
+          Ans = await vcbot.send_message(chat_id=e.chat.id, text="**Send Counts**")
           Num = Ans.text
           if "/cancel" in Num:
              return await e.reply_text("**All Process Cancelled**")
