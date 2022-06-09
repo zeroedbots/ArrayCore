@@ -2,11 +2,11 @@ import asyncio
 
 from pyrogram import idle
 
-from ArrayCore import (Venom1, Venom2, Venom3, Venom4,
+from . import (Venom1, Venom2, Venom3, Venom4,
                Venom5, Venom6, Venom7, Venom8,
                vcbot, hl)
                
-from ArrayCore import (call_py1, call_py2, call_py3, call_py4,
+from . import (call_py1, call_py2, call_py3, call_py4,
                call_py5, call_py6, call_py7, call_py8)
 
 
