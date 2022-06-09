@@ -197,7 +197,7 @@ async def stream(client, m: Message):
             pos = add_to_queue(chat_id, "Radio 📻", livelink, link, "Audio", 0)
             await huehue.edit(f"Queued at **#{pos}**")
          else:
-            await Venom1.join_chat(chat_id)    
+            await Session.join_chat(chat_id)    
             try:
                await call_py1.join_group_call(
                         chat_id,
