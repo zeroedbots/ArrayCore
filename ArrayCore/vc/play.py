@@ -17,7 +17,7 @@ from youtubesearchpython import VideosSearch
 
 from ArrayCore.vc.queues import QUEUE, add_to_queue, get_queue
 from . import CHAT_TITLE, gen_thumb
-from .. import vcbot, call_py1, HNDLR, SUDO_USERS
+from .. import vcbot, call_py1, HNDLR, SUDO_USERS, Venom1 
 
 logging.basicConfig(level=logging.INFO)
 
@@ -117,7 +117,7 @@ async def ping(_, e: Message):
                         except Exception as ep:
                             await TheVenomXD.edit(f"`{ep}`")
 
-@vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["pfrm"], prefixes=HNDLR))
+@Venom1.on_message(filters.user(SUDO_USERS) & filters.command(["pfrm"], prefixes=HNDLR))
 async def playfrom(client, m: Message):
  if (m.from_user and m.from_user.is_contact) or m.outgoing:
     chat_id = m.chat.id
