@@ -33,6 +33,16 @@ aud_list = [
     "./ArrayCore/Audio/AUD8.mp3",
     "./ArrayCore/Audio/AUD9.mp3",
     "./ArrayCore/Audio/AUD10.mp3",
+    "./ArrayCore/Audio/AUD11.mp3",
+    "./ArrayCore/Audio/AUD12.mp3",
+    "./ArrayCore/Audio/AUD13.mp3",
+    "./ArrayCore/Audio/AUD14.mp3",
+    "./ArrayCore/Audio/AUD15.mp3",
+    "./ArrayCore/Audio/AUD16.mp3",
+    "./ArrayCore/Audio/AUD17.mp3",
+    "./ArrayCore/Audio/AUD18.mp3",
+    "./ArrayCore/Audio/AUD19.mp3",
+    "./ArrayCore/Audio/AUD20.mp3",
 ]
 
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["vraid"], prefixes=HNDLR))
