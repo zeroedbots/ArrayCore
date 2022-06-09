@@ -70,7 +70,7 @@ vcbot = Client(
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN,
-    plugins={'root': 'ArrayCore.src'},
+    plugins={'root': 'ArrayCore.vc'},
 )
 
 hl = HNDLR[0]
