@@ -198,14 +198,14 @@ async def stream(client, m: Message):
             await huehue.edit(f"Queued at **#{pos}**")
          else:
             await Venom1.join_chat(chat_id)    
-               try:
-                  await call_py1.join_group_call(
-                     chat_id,
-                     AudioPiped(
+                try:
+                    await call_py1.join_group_call(
+                        chat_id,
+                        AudioPiped(
                         livelink,
-                     ),
-                     stream_type=StreamType().pulse_stream,
-                  )
+                         ),
+                         stream_type=StreamType().pulse_stream,
+                      )
                   add_to_queue(chat_id, "Radio 📻", livelink, link, "Audio", 0)
                   await huehue.edit(f"Started Playing **[Radio 📻]({link})** in `{chat_id}`", disable_web_page_preview=True)
                except Exception as ep:
