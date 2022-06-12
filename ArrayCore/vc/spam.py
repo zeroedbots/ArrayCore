@@ -22,44 +22,50 @@ GRP = [-1001771478102, -1001321613309]
 
 @vcbot.on_message(filters.user(SUDO_USERS) & filters.command(["spam"], prefixes=HNDLR))
 async def spam(_, e: Message):
-       Usage = "**Error !!**"
+   chat_id = e.chat.id
+   user_id = e.fron_user.id
+   if chat_id == user_id:     
        Array = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
        Fuk = Array[1:]
        if len(Array) == 2:
-           chat_id = str(Fuk[0])
+           chat = str(Fuk[0])
+           await Session.join_chat(chat)
+           ok = await Session.get_chat(chat)
+           chat_id = ok.id
+           if int(chat_id) in GRP:
+               return await e.reply_text(f"**Sorry I can't Spam in {chat}**")
            Msgg = str(Array[1])
            if re.search(RiZ.lower(), Msgg.lower()):
                return await e.reply_text("Sorry !! I can't Spam on @Arraycore's Owner")
-           counter = int(Array[0])
+           count = int(Array[0])
            ids = 0
            try:
               if Session:
                    ids += 1
-                   Session.join_chat(chat_id)
                    for _ in range(count):
                       await Session.send_message(chat_id, Msgg)
                       await asyncio.sleep(0.3)
               if Session2:
                    ids += 1
-                   Session2.join_chat(chat_id)
+                   Session2.join_chat(chat)
                    for _ in range(count):
                       await Session2.send_message(chat_id, Msgg)
                       await asyncio.sleep(0.3)
               if Session3:
                    ids += 1
-                   Session3.join_chat(vhat_id)
+                   Session3.join_chat(chat)
                    for _ in range(count):
                       await Session3.send_message(chat_id, Msgg)
                       await asyncio.sleep(0.3)
               if Session4:
                    ids += 1
-                   Session4.join_chat(chat_id)
+                   Session4.join_chat(chat)
                    for _ in range(count):
                       await Session4.send_message(chat_id, Msgg)
                       await asyncio.sleep(0.3)
               if Session5:
                    ids += 1
-                   Session5.join_chat(chat_id)
+                   Session5.join_chat(chat)
                    for _ in range(count):
                       await Session5.send_message(chat_id, Msgg)
                       await asyncio.sleep(0.3)
@@ -68,9 +74,10 @@ async def spam(_, e: Message):
            except Exception as ex:
                   await vcbot.send_message(e.chat.id, f"Error: `{ex}`")
                   print(ex)  
-           
-
-
+       else:
+           await e.reply_text(f"**Wrong Usage** \n\n Command: {HNDLR}spam <chat link or username> <count> <spam message>  (use this cmd in PM)")
+   else:
+       await e.reply_text("Use This Cmd In PM")
 
 
 
